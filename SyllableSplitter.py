@@ -1,7 +1,7 @@
 lettergroups = ["bl","br","ch","cl","cr","ck",
 	"dr","ci","fl","fr","gh","gl","gr","kl","kr","mn","nc","ng",
 	"py","ss","ou","io","th","sc","ps","ee","ph","pr","qu","pt","st",
-	"sh","tr","to","ly","gy","wh", "ry", "ky"]
+	"sh","tr","to","ly","gy","wh", "ry", "ky","oo"]
 specials = ["io","tio","sio","sci","psy","ee","cio","eo","fly","y","why","cry","try", "dry", "ank"]
 vowels = ["a","e","o","i","u"]
 cons = ["b","c","d","f","g","h","j","k","l","m","n","p","q","r","s","t","v","w","x","y","z"]
@@ -72,13 +72,15 @@ def breakIntoGroups(st):
 			else:
 				fin += [gro]
 				x+=len(gro)-2
-			x+=1
-			
+			x+=1			
 		else:
 			for ind in range(0,len(fin)):
-				if(fin[ind][0] == "o" and fin[ind][1] == "g" and ind !=0):
-					fin[ind] = remStringItem(fin[ind],0)
-					fin = fin[0:ind] + ["o"]+fin[ind:]
+				try:
+					if(fin[ind][0] == "o" and fin[ind][1] == "g" and ind !=0):
+						fin[ind] = remStringItem(fin[ind],0)
+						fin = fin[0:ind] + ["o"]+fin[ind:]
+				except:
+					hsdkjsahdkj=0
 			return fin
 	for ind in range(0,len(fin)):
 		if(fin[ind][0] == "o" and fin[ind][1] == "g" and ind !=0):
@@ -109,9 +111,7 @@ def breakIntoSyllables(stli):
 		fin[len(fin)-1]+="t"
 	if(fin[len(fin)-1] == "k"):
 		del fin[len(fin)-1]
-		fin[len(fin)-1]+="k"
-	
-	
+		fin[len(fin)-1]+="k"	
 	return fin
 k = breakIntoGroups(sys.argv[1])
 print k
