@@ -1,8 +1,8 @@
 lettergroups = ["bl","br","ch","cl","cr","ck",
 	"dr","ci","fl","fr","gh","gl","gr","kl","kr","mn","nc","ng",
 	"py","ss","ou","io","th","sc","ps","ee","ph","pr","qu","pt","st",
-	"sh","tr","to","ly","gy","wh", "ry"]
-specials = ["io","tio","sio","sci","psy","ee","cio","eo","fly","y","why","cry","try", "dry"]
+	"sh","tr","to","ly","gy","wh", "ry", "ky"]
+specials = ["io","tio","sio","sci","psy","ee","cio","eo","fly","y","why","cry","try", "dry", "ank"]
 vowels = ["a","e","o","i","u"]
 cons = ["b","c","d","f","g","h","j","k","l","m","n","p","q","r","s","t","v","w","x","y","z"]
 import sys
